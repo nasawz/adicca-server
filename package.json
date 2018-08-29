@@ -1,0 +1,23 @@
+{
+  "name": "adicca-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nasawz/adicca-server.git"
+  },
+  "author": "nasa.wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nasawz/adicca-server/issues"
+  },
+  "homepage": "https://github.com/nasawz/adicca-server#readme",
+  "dependencies": {
+    "parse-server": "^3.0.0",
+    "parse-server-qnfileadapter": "git+https://github.com/wsk3201/parse-server-QNFileAdapter.git"
+  }
+}
