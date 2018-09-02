@@ -1,8 +1,19 @@
 {
   "name": "adicca-server",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "tsc": "tsc",
+    "build": "./node_modules/.bin/tsc",
+    "tsc-watch": "tsc -w",
+    "nodemon-watch": "./node_modules/.bin/nodemon --watch dist dist/server.js",
+    "prestart": "npm run tsc",
+    "start:watch": "npm run watch",
+    "start": "node server.js",
+    "cpconfig": "./node_modules/.bin/copy ./config.json dist",
+    "watch": "npm run tsc-watch & ./node_modules/.bin/nodemon --watch dist dist/server.js",
+    "build:docker": "docker build --tag nasawz/parse-server:1.0.2 ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nasawz/adicca-server.git"
@@ -14,7 +25,15 @@
   },
   "homepage": "https://github.com/nasawz/adicca-server#readme",
   "dependencies": {
+    "express": "^4.16.3",
+    "http": "0.0.0",
     "parse-server": "^3.0.0",
-    "qiniu": "^7.2.1"
+    "qiniu": "^7.2.1",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.3",
+    "nodemon": "^1.18.4",
+    "prettier": "^1.14.2"
   }
 }
